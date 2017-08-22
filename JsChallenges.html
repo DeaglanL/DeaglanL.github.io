@@ -104,9 +104,21 @@
 	<h1>DOM 1</h1>
 
 	<body>
-		<button onclick="createPara()">Create Paragragh</button> paraText: <input type="text" id="paraText" value="-Enter Paragragh Text-">
+		<button onclick="createPara()">Create Paragragh</button> 
+		paraText: <input type="text" id="paraText" value="-Enter Paragragh Text-">
 		<button onclick="changeTag()">Change Paragragh</button>
 		<button onclick="deletePara()">Delete Paragragh</button>
+	</body>
+</div>
+<div id="JSON1">
+	<h1>JSON1</h1>
+	<body>
+	</body>
+</div>
+<div id="JSON2">
+	<h1>JSON1</h1>
+	<body>
+		
 	</body>
 </div>
 
@@ -251,5 +263,27 @@
 		document.getElementById("DOM1").removeChild(paraToDel);
 	}
 	/* -----------------------New Task--------------------------------------------*/
-</script> 
+		var url = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json";
+		var req = new XMLHttpRequest();
+		req.open('GET', url);
+		req.responseType = 'json'
+		req.send();
+		req.onload = function(){
+			var reqData = req.response;
+			var myH1 = document.createElement('h1');
+			myH1.textContent = reqData['members'][0].name;
+			document.getElementsByTagName('body')[0].appendChild(myH1);
+		}
+	/* -----------------------New Task--------------------------------------------*/
+		var url2 = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json";
+		var req2 = new XMLHttpRequest();
+		req2.open('GET', url2);
+		req.responseType = 'json'
+		req.send();
+		req.onload = function(){
+			
+		}
+	
+</script>
+
 </html>
