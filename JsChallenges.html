@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Java Script exercises</title>
 
@@ -9,7 +10,7 @@
 			<br>
 		</h1>
 	</b>
-</div>
+	</div>
 </head>
 
 
@@ -17,51 +18,35 @@
 
 <div>
 	<h1>Task 1 </h1>
+
 	<body>
-		var number = 42; <br>
-		window.alert(number);
-		console.log(number);
+		var number = 42; <br> window.alert(number); console.log(number);
 	</body>
 </div>
 <div>
 	<h1>Task 2</h1>
-	<body>
-		<br>
-		function func1(p1){
-		return p1 * p1;
 
-	}
-	console.log(func1(4));
-</body>
+	<body>
+		<br> function func1(p1){ return p1 * p1; } console.log(func1(4));
+	</body>
 
 </div>
 <div>
 	<h1>Task 3</h1>
+
 	<body>
-		<br>
-		function func2(a1, a2, a3){
-		return a1 + a2 + a3; 
-	}
-	console.log(func2(2,2,2));
-</body>
+		<br> function func2(a1, a2, a3){ return a1 + a2 + a3; } console.log(func2(2,2,2));
+	</body>
 
 </div>
 <div>
 	<h1>Task 4</h1>
 	<br>
-	<body>
-		var person = {
-		name: "kevin",
-		age: 22,
-		occupation: "pilot"
-	};
 
-	console.log(person.name)
-	console.log(person.age)
-	console.log(person.occupation)
-	person.name = "steve"; 
-	console.log(person.name)
-</body>
+	<body>
+		var person = { name: "kevin", age: 22, occupation: "pilot" }; console.log(person.name) console.log(person.age) console.log(person.occupation)
+		person.name = "steve"; console.log(person.name)
+	</body>
 </div>
 <div>
 	<h1>Task 5</h1>
@@ -73,50 +58,55 @@
 </div>
 <div>
 	<h1>Functions 3/ Events 2</h1>
+
 	<body>
-		name1: <input type="text" id="Name" value="-enter name-">
-		age1: <input type="text" id="Age" value="-enter Age-">
-		occupation1: <input type="text" id="Occupation" value="-enter Occupation-">
+		name1: <input type="text" id="Name" value="-enter name-"> age1: <input type="text" id="Age" value="-enter Age-"> occupation1:
+		<input type="text" id="Occupation" value="-enter Occupation-">
 		<button onclick="createPerson()">Create person</button>
 	</body>
 </div>
 <div>
 	<h1>Strings 1</h1>
+
 	<body>
 		<button onclick="ellSay()">Run</button>
 	</body>
 </div>
 <div>
 	<h1>Strings 2</h1>
+
 	<body>
 		<button onclick="str2()">Run</button>
 	</body>
 </div>
 <div>
 	<h1>Arrays 1/Strings 3</h1>
+
 	<body>
 		<button onclick="arr1()">Run</button>
 	</body>
 </div>
 <div>
 	<h1>Iteration 3</h1>
+
 	<body>
 		<button onclick="fizzBuzz(150, 'banta', 'lad')">Run</button>
 	</body>
 </div>
 <div>
 	<h1>Iteration 4</h1>
+
 	<body>
 		<button onclick="iteration4(347812)">Run</button>
 	</body>
 </div>
 <div id="DOM1">
 	<h1>DOM 1</h1>
+
 	<body>
-		<button onclick="createPara()">Create Paragragh</button>
-	    paraText: <input type="text" id="paraText" value="-Enter Paragragh Text-">
-	    <button onclick="changeTag()">Change Paragragh</button>
-	    <button onclick="deletePara()">Delete Paragragh</button>
+		<button onclick="createPara()">Create Paragragh</button> paraText: <input type="text" id="paraText" value="-Enter Paragragh Text-">
+		<button onclick="changeTag()">Change Paragragh</button>
+		<button onclick="deletePara()">Delete Paragragh</button>
 	</body>
 </div>
 
@@ -136,17 +126,17 @@
 	console.log(number);
 	/* -----------------------New Task--------------------------------------------*/
 
-	function func1(p1){
+	function func1(p1) {
 		return p1 * p1;
 
 	}
 	console.log(func1(4));
 	/* -----------------------New Task--------------------------------------------*/
 
-	function func2(a1, a2, a3){
-		return a1 + a2 + a3; 
+	function func2(a1, a2, a3) {
+		return a1 + a2 + a3;
 	}
-	console.log(func2(2,2,2));
+	console.log(func2(2, 2, 2));
 	/* -----------------------New Task--------------------------------------------*/
 
 	var person = {
@@ -158,22 +148,22 @@
 	console.log(person.name)
 	console.log(person.age)
 	console.log(person.occupation)
-	person.name = "steve"; 
+	person.name = "steve";
 	console.log(person.name)
 	/* -----------------------New Task--------------------------------------------*/
 
-	function func3(){
+	function func3() {
 		window.alert("function called");
 	}
 	/* -----------------------New Task--------------------------------------------*/
 
-	function makeOld(){
-		person.age++; 
+	function makeOld() {
+		person.age++;
 		console.log(person.age);
 	}
 	/* -----------------------New Task--------------------------------------------*/
 
-	function createPerson(){
+	function createPerson() {
 		var person2 = {
 			name1: document.getElementById("Name").value,
 			age1: document.getElementById("Age").value,
@@ -188,14 +178,14 @@
 
 	/* -----------------------New Task--------------------------------------------*/
 
-	function ellSay(){
-		var elliotSays = "He said \"My name is Elliott\""; 
+	function ellSay() {
+		var elliotSays = "He said \"My name is Elliott\"";
 
 		window.alert(elliotSays.toUpperCase());
 	}
 
 	/* -----------------------New Task--------------------------------------------*/
-	function str2(){
+	function str2() {
 		var str = "String";
 		var num = 9;
 
@@ -204,68 +194,64 @@
 
 	}
 	/* -----------------------New Task--------------------------------------------*/
-	function arr1(){
-		var strArr = ["t1","t2","t3"];
-		window.alert(strArr[0]+strArr[1]+strArr[2]);
-		strArr.push("t4"); 
+	function arr1() {
+		var strArr = ["t1", "t2", "t3"];
+		window.alert(strArr[0] + strArr[1] + strArr[2]);
+		strArr.push("t4");
 	}
 	/* -----------------------New Task--------------------------------------------*/
-	function fizzBuzz(count, word1 , word2)
-	{
+	function fizzBuzz(count, word1, word2) {
 		for (var i = 0; i < count; i++) {
 			console.log(i);
 
-			if (i%3 === 0 && i%5 === 0){
-				console.log(word1 + word2); 
-			} 
-			else if (i%3 === 0) {
-				console.log(word1); 
-			}
-			else if (i%5 === 0) {
+			if (i % 3 === 0 && i % 5 === 0) {
+				console.log(word1 + word2);
+			} else if (i % 3 === 0) {
+				console.log(word1);
+			} else if (i % 5 === 0) {
 				console.log(word2);
 			}
 		}
 	}
 	/* -----------------------New Task--------------------------------------------*/
-	function iteration4(param1){
-		while(param1 !== 1){
+	function iteration4(param1) {
+		while (param1 !== 1) {
 			console.log("Number is " + param1);
-			if (param1%3 === 0) {
-				param1 = param1/3
+			if (param1 % 3 === 0) {
+				param1 = param1 / 3
 
 				console.log("It is divisible by 3");
-			}
-			else if ((param1 + 1)%3 === 0) {
-				param1 += 1; 
-				param1 = param1/3
+			} else if ((param1 + 1) % 3 === 0) {
+				param1 += 1;
+				param1 = param1 / 3
 				console.log("Added 1 to make it divisible by 3");
-			}
-				else if ((param1 - 1)%3 === 0) {
-				param1 -= 1; 
-				param1 = param1/3
+			} else if ((param1 - 1) % 3 === 0) {
+				param1 -= 1;
+				param1 = param1 / 3
 				console.log("Subtracted 1 to make it divisible by 3");
 			}
 		}
 		console.log("Reached one");
 	}
 	/* -----------------------New Task--------------------------------------------*/
-	function createPara(){
+	function createPara() {
 		var ele = document.getElementById("DOM1");
-		var para = document.createElement("p"); 
+		var para = document.createElement("p");
 
 		ele.appendChild(para)
 	}
 
-	function changeTag(){
+	function changeTag() {
 		var node = document.createTextNode(paraText);
 		para.appendChild(node);
 	}
 
-	function deletePara(){
-		var paraToDel = document.getElementById("p"); 
+	function deletePara() {
+		var paraToDel = document.getElementById("p");
 
 		ele.removeChild(paraToDel);
 
 	}
 </script>
+
 </html>
