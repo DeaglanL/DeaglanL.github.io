@@ -237,21 +237,19 @@
 	function createPara() {
 		var ele = document.getElementById("DOM1");
 		var para = document.createElement("p");
-
+		para.id = "para";
 		ele.appendChild(para)
 	}
 
 	function changeTag() {
-		var node = document.createTextNode(paraText);
-		para.appendChild(node);
+		var node = document.createTextNode(paraText.value);
+		document.getElementById("para").appendChild(node);
 	}
 
 	function deletePara() {
-		var paraToDel = document.getElementById("p");
-
-		ele.removeChild(paraToDel);
-
+		var paraToDel = document.getElementById("para");
+		document.getElementById("DOM1").removeChild(paraToDel);
 	}
-</script>
-
+	/* -----------------------New Task--------------------------------------------*/
+</script> 
 </html>
