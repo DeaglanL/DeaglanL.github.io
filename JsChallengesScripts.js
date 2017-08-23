@@ -1,3 +1,5 @@
+'use strict'
+
 var number = 42
 window.alert(number)
 console.log(number)
@@ -12,7 +14,7 @@ console.log(func1(4))
 function func2 (a1, a2, a3) {
   return a1 + a2 + a3
 }
-console.log(func2(2, 2, 2))
+console.log(func2(1, 'dog', 2))
 /* -----------------------New Task--------------------------------------------*/
 
 var person = {
@@ -137,6 +139,7 @@ req.onload = function () {
 /* -----------------------New Task--------------------------------------------*/
 var url2 = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json'
 var req2 = new XMLHttpRequest()
+var requestData
 req2.open('GET', url2)
 req2.responseType = 'json'
 req2.send()
@@ -163,7 +166,7 @@ function kingSearch (sTerm) {
 
   // display king
   var newEle = document.getElementById('JSON2')
-  var newPara = document.createElement('p')
+  var newPara = documendsat.createElement('p')
   newPara.id = 'para1'
   newEle.appendChild(newPara)
 
@@ -180,5 +183,54 @@ Create a virtual garage with the following functionality
 •	 Calculate the bill for a car, dependant on its attributes
 */
 
-function addCar () {
+let parking = []
+let car
+let addCar = (make, colour, plate, price) => {
+  parking.push(car = {
+    make,
+    colour,
+    plate,
+  price})
 }
+let q
+let searchCarByPlate = (term) => {
+  return q = parking.filter((a) => {
+    return a.plate === term
+  })
+}
+
+let removeCar = (car) => parking.splice(parking.indexOf(car))
+
+let outputContents = () => {
+  return JSON.stringify(parking)
+}
+
+let calcBill = (car) => {
+  switch (car.colour) {
+    case 'red':
+      return acar.price * 0.25
+      break
+
+    case 'blue':
+      return car.price * 0.1
+      break
+
+    case 'black':
+      return car.price * 0.14
+      break
+
+    default:
+      return -1
+      break
+  }
+}
+
+console.log('Adding car')
+addCar('volvo', 'blue', 'cd354g', 1000)
+console.log(outputContents())
+console.log('caluclating price')
+console.log(searchCarByPlate('cd354g'))
+console.log(calcBill(searchCarByPlate('cd354g')[0]))
+console.log('removeing car')
+removeCar(searchCarByPlate('cd354g')[0])
+console.log(outputContents())
