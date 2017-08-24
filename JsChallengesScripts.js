@@ -183,29 +183,38 @@ Create a virtual garage with the following functionality
 •	 Output the contents of the garage
 •	 Calculate the bill for a car, dependant on its attributes
 */
-
-let parking = []
-let car
+let allCars = []; 
+let parking = [];
 let addCar = (make, colour, plate, price) => {
-    parking.push(car = {
+    let car;
+    allCars.push(car = {
         make,
         colour,
         plate,
         price
     })
-
-    outputContents();
+return car;
 
 }
 
 
-let q
+let checkinCar = (car) => {
+parking.push(car);
+outputContents();
+}
+
+let s1
 let searchCarByPlate = (term) => {
-    return q = parking.filter((a) => {
+    return s1 = parking.filter((a) => {
         return a.plate === term;
     })
 }
-
+let s2
+let searchAllCarsByPlate = (carPlate) => {
+    return s2 = allCars.filter((b) => {
+        return b.plate === carPlate;
+    })
+}
 
 let removeCar = (car) => {
     console.log(car);
@@ -218,10 +227,12 @@ let removeCar = (car) => {
 let outputContents = () => {
     let output = "";
 
+    console.log(parking);
+
+
     for (var w = 0; w < parking.length; w++) {
         output += `Car ${w} \n`;
         output += `Make: ${parking[w].make}, Colour: ${parking[w].colour}, Plate: ${parking[w].plate}, Price: ${parking[w].price} \n`;
-
     }
 
 
@@ -272,10 +283,18 @@ let consoleReader = (input) =>{
         {
             document.getElementById("console").value = consoleRemove(cinput);
         }
+        else if (cinput.includes("checkin"))
+            {
+                document.getElementById("console").value = consoleCheckinCar(cinput);
+            }
+            else if (cinput.includes("checkout"))
+                {
+                    document.getElementById("console").value = consoleRemove(cinput);
+                }
 }
 
 let help = () =>{
-    return "Help";
+    return "Commands: create <make>,<colour>,<licenseplate>,<price>  |  output | remove <License plate> | checkin <License plate> | checkout <License plate>  "
 }
 
 let consoleCreate = (cip) =>{
@@ -291,5 +310,12 @@ let consoleRemove = (cip) =>{
     cip = cip.replace("remove", ""); 
     cip = cip.trim(); 
     removeCar(cip);
-    return "car removed";
+    return `car removed with plate ${cip}`;
+}
+
+let consoleCheckinCar = (cip) =>{
+    cip = cip.replace("checkin", ""); 
+    cip = cip.trim(); 
+    checkinCar(searchAllCarsByPlate(cip));
+    return `car added with plate ${cip}`;
 }
