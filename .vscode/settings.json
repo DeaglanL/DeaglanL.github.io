@@ -1,5 +1,3 @@
 {
-    "beautify.onSave": true,
-    "editor.formatOnSave": true,
     "eslint.enable": true
 }

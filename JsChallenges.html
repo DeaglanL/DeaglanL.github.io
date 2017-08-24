@@ -123,6 +123,22 @@
 		<button onclick="kingSearch(SearchTerm.value)">Search</button>
 	</body>
 </div>
+<div id="garage">
+	<h1>Garage</h1>
+
+	<body>
+		<textarea name="contents" id="contents" cols=100 rows="10"></textarea>
+		<br> Add a car Make: <input type="text" id="make" value="-Enter make-"> Colour: <input type="text" id="colour" value="-Enter Colour-">		Plate: <input type="text" id="plate" value="-Enter Plate-"> Price: <input type="text" id="price" value="-Enter Price-">
+		<button onclick="addCar(make.value, colour.value, plate.value, price.value)">Add</button>
+		<br>
+		<br> Car Selecter
+		<br> Enter licence plate: <input type="text" id="lP" value="-Licence plate-">
+		<button onclick="calcBill(searchCarByPlate(lP.value)[0])">Calculate Bill</button><button onclick="removeCar(searchCarByPlate(lP.value)[0])">Remove Car</button>
+
+
+
+	</body>
+</div>
 
 <script type="text/javascript" src="JsChallengesScripts.js"></script>
 
