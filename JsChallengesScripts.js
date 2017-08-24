@@ -227,7 +227,7 @@ let outputContents = () => {
 
 
     document.getElementById('contents').value = output;
-    return JSON.stringify(parking);
+    return output;
 }
 
 let calcBill = (car) => {
@@ -254,3 +254,42 @@ let calcBill = (car) => {
 /* -----------------------New Task--------------------------------------------*/
 //add faults to car obj
 //create cli 
+
+let consoleReader = (input) =>{ 
+    let cinput = input.toLowerCase();
+    if (cinput.includes("help")) {
+        document.getElementById("console").value = help();
+    }
+    else if (cinput.includes("create"))
+    {
+        document.getElementById("console").value = consoleCreate(cinput);
+    }
+    else if (cinput.includes("output"))
+        {
+            document.getElementById("console").value = outputContents();
+        }
+     else if (cinput.includes("remove"))
+        {
+            document.getElementById("console").value = consoleRemove(cinput);
+        }
+}
+
+let help = () =>{
+    return "Help";
+}
+
+let consoleCreate = (cip) =>{
+
+    cip = cip.replace("create", ""); 
+    cip = cip.trim(); 
+    let params = cip.split(',');
+    addCar(params[0], params[1], params[2], params[3]*1);
+    return "Car added";
+}
+
+let consoleRemove = (cip) =>{
+    cip = cip.replace("remove", ""); 
+    cip = cip.trim(); 
+    removeCar(cip);
+    return "car removed";
+}
