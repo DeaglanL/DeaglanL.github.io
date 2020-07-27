@@ -1,18 +1,14 @@
-import React from 'react';
-import './App.css';
-import CVData from './Data/CVData'
-import Header from './Component/Header';
-import About from './Component/About';
-import Footer from './Component/Footer';
+import React, { Component } from 'react';
+import { Route } from 'react-router';
+import Layout from './Component/Layout';
 
-function App() {
-  return (
-    <div className="App">
-        <Header />
-        <About data = {this.state.CVData.About}/>
-        <Footer />
-    </div>
-  );
+export default class App extends Component {
+
+  render() {
+    return     ( <Layout>
+    {/*<Route exact path='/' component={HomePage} /> */}
+  </Layout>
+    )
+  }
 }
 
-export default App;
