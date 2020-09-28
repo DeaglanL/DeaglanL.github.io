@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router';
-import {Layout} from './Component/Layout';
-import {HomePage} from './Pages/HomePage';
-import {CV} from './Pages/CV';
-export default class App extends Component {
+import Layout from './Component/Layout';
+import HomePage from './Pages/Homepage';
+import CV from './Pages/CV';
 
-  render() {
+function App() {
+
     return (
     <Layout>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/CV' component={CV} />
     </Layout>
     )
-  }
+  
 }
-
+export default App;
