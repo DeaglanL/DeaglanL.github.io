@@ -6,8 +6,8 @@ import background from "../../Img/background.jpg";
 
 
 const HomePageBG = styled.div`
-  /* background: radial-gradient(circle, rgba(24,37,201,1) 0%, rgba(83,135,183,1) 35%, rgba(11,25,66,1) 100%); */
-  background: url(${background});
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(5,106,185,1) 76%, rgba(0,212,255,1) 100%); 
+  /* background: url(${background}); */
   background-size: cover;
 `;
 
@@ -15,10 +15,10 @@ const HomePageBG = styled.div`
 
 function HomePage(props) {
    return (
-      <HomePageBG>
+      <div>
          {/*Add image for browser and verticle background for mobile */}
          <About></About>
-      </HomePageBG>
+      </div>
    );
 }
 export default HomePage;

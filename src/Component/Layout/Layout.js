@@ -22,8 +22,7 @@ function Layout(props) {
                 <Container fluid className="bg-dark">
                     <Row>
                         <Col className="d-flex justify-content-center py-3"><SocialIcon url="https://www.linkedin.com/in/deaglan-lynch" /></Col>
-                        <Col className="d-flex justify-content-center py-3"><SocialIcon url="https://www.linkedin.com/in/deaglan-lynch" /></Col>
-                        <Col className="d-flex justify-content-center py-3"><SocialIcon url="https://www.linkedin.com/in/deaglan-lynch" /></Col>
+                        <Col className="d-flex justify-content-center py-3"><SocialIcon url="https://github.com/DeaglanL" /></Col>
                     </Row>
                 </Container>
             </footer>
